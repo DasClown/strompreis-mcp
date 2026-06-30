@@ -1,1 +1,7 @@
-__pycache__/\n*.egg-info/\n*.pyc\n.env\n*.db
+__pycache__/
+*.egg-info/
+*.pyc
+.env
+*.db
+.DS_Store
+*.log
