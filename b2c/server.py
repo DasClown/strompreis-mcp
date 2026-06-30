@@ -28,10 +28,12 @@ app = FastAPI(
 TEMPLATES_DIR = Path(__file__).parent / "templates"
 STATIC_DIR = Path(__file__).parent / "static"
 
-# Affiliate links
+# Affiliate links for Tibber (via Awin — €30/Sale)
+# Sign up at https://www.awin.com/ then apply to Tibber (merchant 57405)
+# Replace YOUR_AWIN_ID with your actual Awin publisher ID
 AFFILIATE = {
-    "tibber": "https://www.awin1.com/cread.php?awinmid=XXXXX&p=https://tibber.com/de",
-    "awattar": "https://www.awin1.com/cread.php?awinmid=XXXXX&p=https://awattar.de",
+    "tibber": "https://www.awin1.com/cread.php?awinmid=57405&awinaffid=YOUR_AWIN_ID&p=https://tibber.com/de",
+    "awattar": "https://www.awattar.at/company/partner",  # Contact: patrick.weltin@awattar.com
 }
 
 # German electricity price stats (2026 Q2)

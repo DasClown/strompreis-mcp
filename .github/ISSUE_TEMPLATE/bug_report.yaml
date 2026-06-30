@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report a problem with the Strompreis MCP server
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of the server has the issue?
+      options:
+        - price_forecast tool
+        - best_hours tool
+        - db_status tool
+        - Data collector (cron)
+        - Database / persistence
+        - B2C Website
+        - Installation / Setup
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Call `price_forecast(hours=6)`
+        2. See output: ...
+        3. Expected: ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version are you running?
+      placeholder: "0.2.0"

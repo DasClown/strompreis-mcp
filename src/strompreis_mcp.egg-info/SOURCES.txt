@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/strompreis_mcp/__init__.py
+src/strompreis_mcp/auth.py
+src/strompreis_mcp/collector.py
+src/strompreis_mcp/database.py
+src/strompreis_mcp/forecast.py
+src/strompreis_mcp/server.py
+src/strompreis_mcp/smard_client.py
+src/strompreis_mcp.egg-info/PKG-INFO
+src/strompreis_mcp.egg-info/SOURCES.txt
+src/strompreis_mcp.egg-info/dependency_links.txt
+src/strompreis_mcp.egg-info/entry_points.txt
+src/strompreis_mcp.egg-info/requires.txt
+src/strompreis_mcp.egg-info/top_level.txt

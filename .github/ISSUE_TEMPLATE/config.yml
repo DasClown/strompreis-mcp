@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/DasClown/strompreis-mcp/discussions
+    about: Ask questions, share use cases, or suggest ideas

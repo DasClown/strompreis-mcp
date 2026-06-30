@@ -1,0 +1,38 @@
+name: Feature Request
+description: Suggest an enhancement for Strompreis MCP
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What would make this server more useful for you?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which area does this affect?
+      options:
+        - New data source (e.g., ENTSO-E, DWD)
+        - New tool
+        - Forecast accuracy / ML model
+        - API / Monetization
+        - B2C Website
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should it work?
+    validations:
+      required: true

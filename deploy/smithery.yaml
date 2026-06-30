@@ -1,0 +1,31 @@
+# Smithery Deployment Configuration
+# Visit https://smithery.ai/new to publish this server
+# After publishing, update this badge in README.md
+
+version: 1
+server:
+  name: "strompreis-mcp"
+  description: "German electricity price forecast for AI agents"
+  command: "pip install strompreis-mcp && strompreis-mcp"
+  transport: "stdio"
+  tools:
+    - name: "price_forecast"
+      description: "Get hourly electricity price forecast for Germany"
+      parameters:
+        hours:
+          type: integer
+          default: 24
+          description: "Number of hours to forecast (1-72)"
+    - name: "best_hours"
+      description: "Find cheapest hours for power consumption"
+      parameters:
+        count:
+          type: integer
+          default: 3
+          description: "Number of cheapest hours to return"
+    - name: "db_status"
+      description: "Check database health and usage statistics"
+  namespace: "DasClown"
+  license: "MIT"
+  repository: "https://github.com/DasClown/strompreis-mcp"
+  tags: ["electricity", "prices", "germany", "energy", "strompreis"]
