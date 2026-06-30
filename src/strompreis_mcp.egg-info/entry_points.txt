@@ -1,3 +1,0 @@
-[console_scripts]
-strompreis-collector = strompreis_mcp.collector:main
-strompreis-mcp = strompreis_mcp.server:main
