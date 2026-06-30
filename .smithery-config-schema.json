@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "STROMPREIS_API_KEY": {
+      "type": "string",
+      "default": "",
+      "description": "Optional API key for production use. Generate with: python3 -c 'from strompreis_mcp.database import create_api_key; print(create_api_key(\"my-app\", \"pro\", 10000))'"
+    }
+  }
+}

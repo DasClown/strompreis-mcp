@@ -1,0 +1,43 @@
+{
+  "name": "Strompreis MCP",
+  "description": "German electricity price forecasts for AI agents. Tells your smart home agent when to run appliances at the cheapest rate.",
+  "command": "pip install strompreis-mcp && strompreis-mcp",
+  "transport": "stdio",
+  "tools": [
+    {
+      "name": "price_forecast",
+      "description": "Get hourly electricity price forecast for Germany in ct/kWh",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hours": {
+            "type": "integer",
+            "default": 24,
+            "description": "Number of hours to forecast (1-72)"
+          }
+        }
+      }
+    },
+    {
+      "name": "best_hours",
+      "description": "Find the cheapest hours for power consumption",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "default": 3,
+            "description": "Number of cheapest hours to return"
+          }
+        }
+      }
+    },
+    {
+      "name": "db_status",
+      "description": "Check database health and usage statistics",
+      "inputSchema": { "type": "object", "properties": {} }
+    }
+  ],
+  "repository": "https://github.com/DasClown/strompreis-mcp",
+  "license": "MIT"
+}
