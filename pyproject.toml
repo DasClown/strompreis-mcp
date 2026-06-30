@@ -1,7 +1,7 @@
 [project]
 name = "strompreis-mcp"
-version = "0.1.0"
-description = "MCP server for German electricity price forecasts"
+version = "0.2.0"
+description = "MCP server for German electricity price forecasts with SQLite persistence"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
@@ -10,6 +10,11 @@ authors = [
 
 [project.scripts]
 strompreis-mcp = "strompreis_mcp.server:main"
+strompreis-collector = "strompreis_mcp.collector:main"
+
+[project.optional-dependencies]
+b2c = ["fastapi", "uvicorn"]
+dev = ["pytest"]
 
 [build-system]
 requires = ["setuptools>=75"]

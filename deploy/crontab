@@ -1,0 +1,16 @@
+# ⚡ Strompreis MCP — Crontab Configuration
+#
+# Install with: crontab deploy/crontab
+#
+# Data collection every 15 minutes collects SMARD data.
+# The MCP server reads from the same database, so it always
+# has fresh data without needing its own cron.
+
+# ─── Data Collection (every 15 minutes) ───────────────────
+*/15 * * * * cd /home/pi/strompreis-mcp && strompreis-collector collect >/dev/null 2>&1
+
+# ─── Weekly Database Maintenance (Sunday 03:00) ────────────
+0 3 * * 0 cd /home/pi/strompreis-mcp && strompreis-collector vacuum >/dev/null 2>&1
+
+# ─── Monthly Model Retraining (1st of month 04:00) ────────
+0 4 1 * * cd /home/pi/strompreis-mcp && strompreis-collector status >> /var/log/strompreis-monthly.log 2>&1

@@ -1,9 +1,14 @@
 Metadata-Version: 2.4
 Name: strompreis-mcp
-Version: 0.1.0
-Summary: MCP server for German electricity price forecasts
+Version: 0.2.0
+Summary: MCP server for German electricity price forecasts with SQLite persistence
 Author: DasClown
 License: MIT
 Requires-Python: >=3.11
 License-File: LICENSE
+Provides-Extra: b2c
+Requires-Dist: fastapi; extra == "b2c"
+Requires-Dist: uvicorn; extra == "b2c"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
 Dynamic: license-file

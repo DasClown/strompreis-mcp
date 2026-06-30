@@ -1,0 +1,24 @@
+[Unit]
+Description=Strompreis MCP Server
+Documentation=https://github.com/DasClown/strompreis-mcp
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/pi/strompreis-mcp
+ExecStart=strompreis-mcp
+Restart=always
+RestartSec=10
+StandardInput=null
+
+# Data persistence
+Environment=STROMPREIS_DB_PATH=/root/.strompreis/strompreis.db
+
+# Optional: set API key for keyed mode
+# Environment=STROMPREIS_API_KEY=sp_your_key_here
+
+[Install]
+WantedBy=multi-user.target

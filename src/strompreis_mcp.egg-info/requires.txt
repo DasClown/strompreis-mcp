@@ -1,0 +1,7 @@
+
+[b2c]
+fastapi
+uvicorn
+
+[dev]
+pytest

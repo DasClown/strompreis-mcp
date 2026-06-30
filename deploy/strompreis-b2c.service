@@ -1,0 +1,20 @@
+[Unit]
+Description=Strompreis B2C Website (stromcheck.de)
+Documentation=https://github.com/DasClown/strompreis-mcp
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/pi/strompreis-mcp
+ExecStart=python3 -m uvicorn b2c.server:app --host 0.0.0.0 --port 8080
+Restart=always
+RestartSec=10
+
+# Same database as MCP server
+Environment=STROMPREIS_DB_PATH=/root/.strompreis/strompreis.db
+
+[Install]
+WantedBy=multi-user.target
