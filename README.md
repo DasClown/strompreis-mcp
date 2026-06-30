@@ -2,7 +2,7 @@
 
 [![Python ≥3.11](https://img.shields.io/badge/python-%3E%3D3.11-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Smithery](https://img.shields.io/badge/Smithery-Install-7C3AED)](https://smithery.ai/server/strompreis-mcp)
+[![Smithery](https://img.shields.io/badge/Smithery-Install-7C3AED)](https://smithery.ai/servers/DasClown/strompreis-mcp)
 
 **MCP server that gives AI agents real-time German electricity price forecasts.**  
 Tells your smart home agent when to run the dishwasher, charge the car, or schedule power-hungry tasks.
@@ -186,7 +186,7 @@ Then open `http://localhost:8080` — users enter their annual kWh consumption a
 
 ### Smithery
 
-[![Smithery](https://img.shields.io/badge/Smithery-Install-7C3AED)](https://smithery.ai/server/strompreis-mcp)
+[![Smithery](https://img.shields.io/badge/Smithery-Install-7C3AED)](https://smithery.ai/servers/DasClown/strompreis-mcp)
 
 One-click install for Claude Desktop via Smithery.
 
