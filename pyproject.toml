@@ -1,0 +1,19 @@
+[project]
+name = "strompreis-mcp"
+version = "0.1.0"
+description = "MCP server for German electricity price forecasts"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "DasClown" },
+]
+
+[project.scripts]
+strompreis-mcp = "strompreis_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
